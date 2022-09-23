@@ -4,26 +4,32 @@
  */
 package com.proyectociclo3.reto2.entities;
 
-import java.time.LocalDate;
-
 /**
  *
  * @author LUNEL
  */
-public class Empleado {
+class Usuario {
+   private long id;
     private long cedula;
     private String nombre;
-    private String email;
-    public Empresa empresa; 
+    private EnumUsuario rol;
 
-    public Empleado() {
+    public Usuario() {
     }
 
-    public Empleado(long cedula, String nombre, String email, Empresa empresa) {
+    public Usuario(long id, long cedula, String nombre, EnumUsuario rol) {
+        this.id = id;
         this.cedula = cedula;
         this.nombre = nombre;
-        this.email = email;
-        this.empresa = empresa;
+        this.rol = rol;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public long getCedula() {
@@ -42,21 +48,13 @@ public class Empleado {
         this.nombre = nombre;
     }
 
-    public String getEmail() {
-        return email;
+    public EnumUsuario getRol() {
+        return rol;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setRol(EnumUsuario rol) {
+        this.rol = rol;
     }
-
-    public Empresa getEmpresa() {
-        return empresa;
-    }
-
-    public void setEmpresa(Empresa empresa) {
-        this.empresa = empresa;
-    }
-
-
+    
+        
 }

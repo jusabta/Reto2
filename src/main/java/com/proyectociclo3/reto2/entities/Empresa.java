@@ -12,24 +12,20 @@ import java.time.LocalDate;
  */
 public class Empresa {
     private long id;
+    private String Nit;
     private String nombre;
-    private String nit;
-    private String telefono;
     private String direccion;
-    private LocalDate fechacreacion;
-    private LocalDate fechaactualizacion;
+    private String telefono;    
 
     public Empresa() {
     }
 
-    public Empresa(long id, String nombre, String nit, String telefono, String direccion, LocalDate fechacreacion, LocalDate fechaactualizacion) {
+    public Empresa(long id, String Nit, String nombre, String direccion, String telefono) {
         this.id = id;
+        this.Nit = Nit;
         this.nombre = nombre;
-        this.nit = nit;
-        this.telefono = telefono;
         this.direccion = direccion;
-        this.fechacreacion = fechacreacion;
-        this.fechaactualizacion = fechaactualizacion;
+        this.telefono = telefono;
     }
 
     public long getId() {
@@ -40,28 +36,20 @@ public class Empresa {
         this.id = id;
     }
 
+    public String getNit() {
+        return Nit;
+    }
+
+    public void setNit(String Nit) {
+        this.Nit = Nit;
+    }
+
     public String getNombre() {
         return nombre;
     }
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
-    }
-
-    public String getNit() {
-        return nit;
-    }
-
-    public void setNit(String nit) {
-        this.nit = nit;
-    }
-
-    public String getTelefono() {
-        return telefono;
-    }
-
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
     }
 
     public String getDireccion() {
@@ -72,22 +60,12 @@ public class Empresa {
         this.direccion = direccion;
     }
 
-    public LocalDate getFechacreacion() {
-        return fechacreacion;
+    public String getTelefono() {
+        return telefono;
     }
 
-    public void setFechacreacion(LocalDate fechacreacion) {
-        this.fechacreacion = fechacreacion;
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
     }
-
-    public LocalDate getFechaactualizacion() {
-        return fechaactualizacion;
-    }
-
-    public void setFechaactualizacion(LocalDate fechaactualizacion) {
-        this.fechaactualizacion = fechaactualizacion;
-    }
-    
-    
     
 }

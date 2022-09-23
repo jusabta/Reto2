@@ -4,11 +4,19 @@
  */
 package com.proyectociclo3.reto2.entities;
 
+import java.time.LocalDate;
+
 /**
  *
  * @author LUNEL
  */
-public enum Enum_RoleName {
-    Administrador,Operario;
+public class MovimientoDinero {
+    private long id;
+    private String monto;
+    private float valor;
+    private String concepto;
+    private Usuario usuario;
+    private LocalDate fechatransaccion;
+    
+    
 }
- 
